@@ -1,4 +1,3 @@
-
 function getMenu() {
   document
     .querySelector(".dropdown__list")
@@ -10,10 +9,10 @@ const currentValue = document.querySelector(".dropdown__value");
 currentValue.addEventListener("click", getMenu);
 
 let codeList = document.querySelectorAll(".dropdown__item");
-codeList.forEach((item, index) => {
+codeList.forEach((item) => {
   item.onclick = () => {
     getMenu();
-    currentValue.textContent = codeList[index].textContent;
+    currentValue.textContent = item.textContent;
     return false;
   };
 });
