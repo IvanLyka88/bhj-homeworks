@@ -10,9 +10,17 @@ currentValue.addEventListener("click", getMenu);
 
 let codeList = document.querySelectorAll(".dropdown__item");
 codeList.forEach((item) => {
-  item.onclick = () => {
+  item.addEventListener("click", (event) => {
     getMenu();
     currentValue.textContent = item.textContent;
-    return false;
-  };
+    event.preventDefault();
+  });
 });
+
+// codeList.forEach((item) => {
+//   item.onclick = () => {
+//     getMenu();
+//     currentValue.textContent = item.textContent;
+//     return false;
+//   };
+// });
